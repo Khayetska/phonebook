@@ -1,0 +1,15 @@
+.mainTitle {
+    font-size: 70px;
+    color: #380782;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    user-select: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.titleIcon {
+    width: 60px;
+}

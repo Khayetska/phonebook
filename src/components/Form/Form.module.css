@@ -1,0 +1,26 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.formLabel {
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    cursor: pointer;
+}
+
+.formInput {
+    width: 315px;
+    padding: 10px 16px;
+    font-size: 20px;
+}
+
+.submitBtn {
+    cursor: cell;
+    font-size: 18px;
+    padding: 10px 15px;
+}
