@@ -6,7 +6,7 @@ import {
   selectContacts,
   selectIsLoading,
   selectVisibleContacts,
-} from 'redux/selectors';
+} from 'redux/contacts/contactsSelectors';
 
 const { contactsTitle, contactList, message, messageIcon, messageText } = css;
 

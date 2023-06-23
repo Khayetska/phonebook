@@ -1,0 +1,36 @@
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 2px solid #380782;
+    padding-bottom: 20px;
+    margin: 0 20px;
+}
+
+.nav_accent {
+    padding-top: 20px;
+    margin: 0;
+    border: none;
+}
+
+.nav_link {
+    color: #380782;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+
+    transition: color 400ms ease-in-out;
+}
+
+.nav_link:hover {
+    color: rgb(240, 46, 170);
+}
+
+.nav_link_accent {
+    color: #fff;
+}
+
+.selected {
+    color: rgb(240, 46, 170);
+}

@@ -1,33 +1,36 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addContact } from 'redux/operations';
-import css from './Form.module.css';
-import { selectContacts } from 'redux/selectors';
+import { addContact } from 'redux/contacts/contactsOperations';
+import { selectContacts } from 'redux/contacts/contactsSelectors';
 import Swal from 'sweetalert2';
+import css from './Form.module.css';
+import styles from 'css/input.module.css';
 
 const { form, formLabel, submitBtn, formInput } = css;
 
+const { input } = styles;
+
 const Form = () => {
   const [name, setName] = useState('');
-  const [phone, setNumder] = useState('');
+  const [number, setNumder] = useState('');
 
   const dispatch = useDispatch();
   const contacts = useSelector(selectContacts);
 
-  const newContact = { name, phone };
+  const newContact = { name, number };
 
   const handleInputChange = evt => {
     const { name, value } = evt.target;
 
     if (name === 'name') setName(value);
-    if (name === 'phone') setNumder(value);
+    if (name === 'number') setNumder(value);
   };
 
   const handleSubmit = evt => {
     evt.preventDefault();
 
     // const name = evt.target.elements.name.value;
-    // const phone = evt.target.elements.phone.value;
+    // const number = evt.target.elements.number.value;
 
     for (const contact of contacts) {
       if (contact.name === name) {
@@ -58,7 +61,7 @@ const Form = () => {
         <input
           type="text"
           name="name"
-          className={formInput}
+          className={`${formInput} ${input}`}
           value={name}
           onChange={handleInputChange}
           pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
@@ -70,9 +73,9 @@ const Form = () => {
         Number
         <input
           type="tel"
-          name="phone"
-          className={formInput}
-          value={phone}
+          name="number"
+          className={`${formInput} ${input}`}
+          value={number}
           onChange={handleInputChange}
           pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
           title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"

@@ -1,0 +1,90 @@
+.login_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(images/background_2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 100vh;
+}
+
+.login_title {
+    font-size: 50px;
+    color: rgb(240, 46, 170);
+}
+
+.login_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.login_input {
+    width: 400px;
+    font-size: 20px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 6px;
+    outline: transparent;
+    padding: 18px 30px;
+    color: #fff;
+}
+
+.input_wrapper {
+    position: relative;
+}
+
+.login_label {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+
+    position: absolute;
+    top: -10px;
+
+    font-size: 20px;
+    color: #fff;
+    background-color: #302bba;
+    padding-right: 5px;
+    transition: font-size 500ms ease-in-out, padding-right 500ms ease-in-out, padding-bottom 500ms ease-in-out;
+}
+
+.input_wrapper:hover .login_label {
+    font-size: 22px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+}
+
+.login_button {
+    padding: 10px 30px;
+    font-size: 18px;
+    background-color: #080652;
+    color: #fff;
+    border-color: transparent;
+    transition: box-shadow 350ms ease-in-out, background-color 350ms ease-in-out;
+}
+
+.login_button:hover {
+    border-color: transparent;
+    background-color: rgba(240, 46, 170, 0.4);
+    box-shadow: rgba(240, 46, 170, 0.4) 2px 2px, rgba(240, 46, 170, 0.3) 5px 5px, rgba(240, 46, 170, 0.2) 8px 8px, rgba(240, 46, 170, 0.1) 11px 11px, rgba(240, 46, 170, 0.05) 14px 14px;
+}
+
+.toggle {
+    color: #d4d4d4;
+}
+
+.toggle_link {
+    color: #fafafa;
+    text-underline-offset: 2px;
+    text-decoration-thickness: 1px;
+    transition: text-decoration-color 250ms ease-in-out;
+}
+
+.toggle_link:hover {
+    text-decoration-color: rgba(240, 46, 170, 0.9);
+}

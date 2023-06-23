@@ -36,30 +36,11 @@ button {
   border-radius: 4px;
   font-size: 15px;
   padding: 5px 10px;
-  transition: color 250ms ease-in-out, background-color 500ms ease-in-out;
+  transition: color 250ms ease-in-out, background-color 500ms ease-in-out, border 500ms ease-in-out;
 }
 
 button:hover {
-  background-color: #302bba;
   color: #fff;
-}
-
-input {
-  width: 250px;
-  padding: 5px 10px;
-  font-size: 15px;
-  border: 1px solid #000000;
-  border-radius: 4px;
-  outline: 1px solid transparent;
-
-  transition: border-color 250ms ease-in-out, outline-color 300ms ease-in-out;
-}
-
-input:hover {
-  border-color: #302bba;
-}
-
-input:focus {
-  border-color: #302bba;
-  outline-color: #302bba;
+  background-color: rgba(205, 31, 141, 0.9);
+  border: 1px solid rgba(240, 46, 170, 0.4);
 }

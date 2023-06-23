@@ -3,3 +3,9 @@
     font-size: 24px;
     font-weight: 300;
 }
+
+.finderInput {
+    width: 250px;
+    padding: 5px 10px;
+    font-size: 15px;
+}

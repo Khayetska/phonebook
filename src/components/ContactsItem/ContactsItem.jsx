@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import { FaPhoneAlt } from 'react-icons/fa';
 import Swal from 'sweetalert2';
 import css from './ContactsItem.module.css';
-import { deleteContact } from 'redux/operations';
+import { deleteContact } from 'redux/contacts/contactsOperations';
 
 const { contactsIcon, contactsItem, deleteBtn } = css;
 
 const ContactsItem = ({ contact }) => {
-  const { id, name, phone } = contact;
+  const { id, name, number } = contact;
 
   const dispatch = useDispatch();
 
@@ -32,7 +32,7 @@ const ContactsItem = ({ contact }) => {
   return (
     <li className={contactsItem}>
       <FaPhoneAlt className={contactsIcon} />
-      {name}: {phone}
+      {name}: {number}
       <button className={deleteBtn} type="button" onClick={handleDelete}>
         Delete
       </button>
@@ -44,7 +44,7 @@ ContactsItem.propTypes = {
   contact: PropTypes.shape({
     id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
-    phone: PropTypes.string,
+    number: PropTypes.string,
   }).isRequired,
 };
 
