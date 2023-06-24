@@ -4,7 +4,9 @@ import { FaPhoneAlt } from 'react-icons/fa';
 import Swal from 'sweetalert2';
 import css from './ContactsItem.module.css';
 import { deleteContact } from 'redux/contacts/contactsOperations';
+import styles from 'css/button.module.css';
 
+const { button } = styles;
 const { contactsIcon, contactsItem, deleteBtn } = css;
 
 const ContactsItem = ({ contact }) => {
@@ -33,7 +35,11 @@ const ContactsItem = ({ contact }) => {
     <li className={contactsItem}>
       <FaPhoneAlt className={contactsIcon} />
       {name}: {number}
-      <button className={deleteBtn} type="button" onClick={handleDelete}>
+      <button
+        className={`${button} ${deleteBtn}`}
+        type="button"
+        onClick={handleDelete}
+      >
         Delete
       </button>
     </li>

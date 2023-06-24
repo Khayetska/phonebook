@@ -1,8 +1,8 @@
+import PropTypes from 'prop-types';
+import { useDispatch, useSelector } from 'react-redux';
 import Navigation from 'components/Navigation/Navigation';
 import css from './LogIn.module.css';
 import { Link } from 'react-router-dom';
-// import { signUp } from 'services/auth';
-import { useDispatch } from 'react-redux';
 import { logIn, registerUser } from 'redux/auth/authOperations';
 
 const {
@@ -17,7 +17,6 @@ const {
   toggle_link,
 } = css;
 
-// можна перезвати на Exit
 function LogIn({ register = false }) {
   const dispatch = useDispatch();
 
@@ -41,7 +40,6 @@ function LogIn({ register = false }) {
       password: password.value,
     };
     dispatch(logIn(user));
-    console.log('logged in', email.value, password.value);
   };
 
   return (
@@ -113,5 +111,9 @@ function LogIn({ register = false }) {
     </>
   );
 }
+
+logIn.propTypes = {
+  register: PropTypes.bool,
+};
 
 export default LogIn;

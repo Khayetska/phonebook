@@ -19,7 +19,8 @@ code {
 h1,
 h2,
 h3 {
-  font-family: 'Josefin Sans', sans-serif;
+  /* font-family: 'Josefin Sans', sans-serif; */
+  font-family: 'Permanent Marker', cursive;
   margin: 0;
 }
 
@@ -31,16 +32,4 @@ ul {
 
 button {
   cursor: pointer;
-  background-color: #fff;
-  border: 1px solid #302bba;
-  border-radius: 4px;
-  font-size: 15px;
-  padding: 5px 10px;
-  transition: color 250ms ease-in-out, background-color 500ms ease-in-out, border 500ms ease-in-out;
-}
-
-button:hover {
-  color: #fff;
-  background-color: rgba(205, 31, 141, 0.9);
-  border: 1px solid rgba(240, 46, 170, 0.4);
 }

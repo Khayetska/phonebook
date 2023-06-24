@@ -1,0 +1,38 @@
+.userMenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.userMenu_txt {
+    font-size: 18px;
+    margin: 0
+}
+
+.userMenu_name {
+    font-weight: 500;
+}
+
+.userMenu_btn {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    padding: 5px 10px;
+    font-size: 15px;
+    background-color: rgb(240, 46, 170);
+    border-color: transparent;
+    border-radius: 4px;
+    color: #fff;
+    transition: gap 250ms ease-in-out;
+}
+
+.userMenu_btn:hover {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    gap: 15px;
+}
+
+.userMenu_icon {
+    fill: #fff
+}

@@ -5,10 +5,11 @@ import { selectContacts } from 'redux/contacts/contactsSelectors';
 import Swal from 'sweetalert2';
 import css from './Form.module.css';
 import styles from 'css/input.module.css';
+import style from 'css/button.module.css';
 
 const { form, formLabel, submitBtn, formInput } = css;
-
 const { input } = styles;
+const { button } = style;
 
 const Form = () => {
   const [name, setName] = useState('');
@@ -82,7 +83,7 @@ const Form = () => {
           required
         />
       </label>
-      <button type="submit" className={submitBtn}>
+      <button type="submit" className={`${button} ${submitBtn}`}>
         Add contact
       </button>
     </form>

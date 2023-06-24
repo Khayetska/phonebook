@@ -1,0 +1,20 @@
+.preview_title {
+    font-size: 20px;
+    margin: 0;
+}
+
+.preview_img {
+    width: 480px;
+    border: 1px solid #302bba;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.preview_appeal {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 30px;
+    color: rgb(240, 46, 170);
+    margin: 0 auto;
+    width: 400px;
+}

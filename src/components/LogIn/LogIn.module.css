@@ -22,7 +22,6 @@
     gap: 20px;
 }
 
-
 .login_input {
     width: 400px;
     font-size: 20px;
@@ -32,6 +31,7 @@
     outline: transparent;
     padding: 18px 30px;
     color: #fff;
+    caret-color: rgb(240, 46, 170);
 }
 
 .input_wrapper {
@@ -65,6 +65,7 @@
     background-color: #080652;
     color: #fff;
     border-color: transparent;
+    border-radius: 4px;
     transition: box-shadow 350ms ease-in-out, background-color 350ms ease-in-out;
 }
 
