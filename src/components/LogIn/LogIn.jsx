@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import Navigation from 'components/Navigation/Navigation';
 import css from './LogIn.module.css';
 import { Link } from 'react-router-dom';
