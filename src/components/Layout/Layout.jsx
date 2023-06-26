@@ -1,16 +1,19 @@
-import { Outlet } from 'react-router-dom';
 import { Suspense } from 'react';
+import { Outlet } from 'react-router-dom';
 import css from './Layout.module.css';
-// import Navigation from 'components/Navigation';
 import AppBar from 'components/AppBar';
+import Footer from 'components/Footer';
 
 function Layout() {
   return (
     <div className={css.conteiner}>
       <AppBar />
-      <Suspense fallback={<div>Loading...</div>}>
-        <Outlet />
-      </Suspense>
+      <main>
+        <Suspense fallback={<div>Loading...</div>}>
+          <Outlet />
+        </Suspense>
+      </main>
+      <Footer />
     </div>
   );
 }

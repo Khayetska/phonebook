@@ -1,0 +1,24 @@
+.footer {
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 90%;
+    border-top: 1px solid #302bba;
+    padding-top: 20px;
+}
+
+.footer_content {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+}
+
+.footer_txt {
+    font-size: 15px;
+    margin: 0;
+}
+
+.footer_link {
+    color: #302bba;
+}
