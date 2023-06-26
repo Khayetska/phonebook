@@ -7,7 +7,7 @@ import css from './Form.module.css';
 import styles from 'css/input.module.css';
 import style from 'css/button.module.css';
 
-const { form, formLabel, submitBtn, formInput } = css;
+const { form, input_wrapper, form_label, form_input, submit_btn } = css;
 const { input } = styles;
 const { button } = style;
 
@@ -29,9 +29,6 @@ const Form = () => {
 
   const handleSubmit = evt => {
     evt.preventDefault();
-
-    // const name = evt.target.elements.name.value;
-    // const number = evt.target.elements.number.value;
 
     for (const contact of contacts) {
       if (contact.name === name) {
@@ -57,33 +54,40 @@ const Form = () => {
 
   return (
     <form onSubmit={handleSubmit} className={form}>
-      <label className={formLabel}>
-        Name
+      <div className={input_wrapper}>
+        <label className={form_label} htmlFor="name">
+          Name
+        </label>
         <input
           type="text"
           name="name"
-          className={`${formInput} ${input}`}
+          id="name"
+          className={`${form_input} ${input}`}
           value={name}
           onChange={handleInputChange}
           pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
           title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
           required
         />
-      </label>
-      <label className={formLabel}>
-        Number
+      </div>
+      <div className={input_wrapper}>
+        <label className={form_label} htmlFor="number">
+          Number
+        </label>
         <input
           type="tel"
           name="number"
-          className={`${formInput} ${input}`}
+          id="number"
+          className={`${form_input} ${input}`}
           value={number}
           onChange={handleInputChange}
           pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
           title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
           required
         />
-      </label>
-      <button type="submit" className={`${button} ${submitBtn}`}>
+      </div>
+
+      <button type="submit" className={`${button} ${submit_btn}`}>
         Add contact
       </button>
     </form>

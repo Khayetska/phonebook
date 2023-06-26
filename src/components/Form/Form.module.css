@@ -5,21 +5,40 @@
     gap: 15px;
 }
 
-.formLabel {
-    font-size: 20px;
+.input_wrapper {
+    position: relative;
+}
+
+.form_label {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    font-size: 18px;
+    background-color: #fff;
+    padding-right: 5px;
     cursor: pointer;
+
+    position: absolute;
+    top: -10px;
+    left: -1px;
+    transition: font-size 500ms ease-in-out,
+        padding-right 500ms ease-in-out,
+        padding-bottom 500ms ease-in-out;
 }
 
-.formInput {
-    width: 315px;
-    padding: 10px 16px;
+.input_wrapper:hover .form_label {
     font-size: 20px;
+    padding-right: 10px;
+    padding-bottom: 5px;
 }
 
-.submitBtn {
+.form_input {
+    width: 315px;
+    padding: 16px 16px;
+    font-size: 20px;
+    background-color: transparent;
+}
+
+.submit_btn {
     cursor: cell;
     font-size: 18px;
     padding: 10px 15px;
