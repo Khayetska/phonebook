@@ -8,8 +8,10 @@ import Layout from './Layout';
 import LogInPage from 'pages/LogInPage';
 import RestrictedRoute from './RestrictedRoute/RestrictedRoute';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
+
 const HomePage = lazy(() => import('pages/HomePage'));
 const ContactsPage = lazy(() => import('pages/ContactsPage'));
+const NotFoundPage = lazy(() => import('pages/NotFoundPage'));
 
 export const App = () => {
   const dispatch = useDispatch();
@@ -44,6 +46,7 @@ export const App = () => {
           <RestrictedRoute component={<LogInPage register />} redirectTo="/" />
         }
       />
+      <Route path="*" element={<NotFoundPage />} />
     </Routes>
   );
 };

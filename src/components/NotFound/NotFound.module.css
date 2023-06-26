@@ -1,0 +1,32 @@
+.wrapper {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-size: 70px;
+    color: #fff;
+}
+
+.text {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.link {
+    color: rgb(240, 46, 170);
+    padding: 4px;
+    border-color: transparent;
+    border-radius: 4px;
+    transition: background-color, 500ms ease-in-out;
+    text-underline-offset: 2px;
+    text-decoration-thickness: 1px;
+}
+
+.link:hover {
+    background-color: rgba(240, 46, 170, 0.2);
+}
