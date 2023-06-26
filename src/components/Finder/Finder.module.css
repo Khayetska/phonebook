@@ -1,11 +1,11 @@
-.finderTitle {
+.finder_title {
     margin-top: 30px;
-    font-size: 24px;
+    font-size: 23px;
     font-weight: 100;
-    color: #292929;
+    color: #363333;
 }
 
-.finderInput {
+.finder_input {
     width: 250px;
     padding: 5px 10px;
     font-size: 15px;
