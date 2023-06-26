@@ -6,9 +6,14 @@ import MainTitle from 'components/MainTitle';
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchContacts } from 'redux/contacts/contactsOperations';
-import { selectErorr, selectIsLoading } from 'redux/contacts/contactsSelectors';
+import {
+  selectContacts,
+  selectErorr,
+  selectIsLoading,
+} from 'redux/contacts/contactsSelectors';
 
 function ContactsPage() {
+  const contacts = useSelector(selectContacts);
   const isLoading = useSelector(selectIsLoading);
   const error = useSelector(selectErorr);
   const dispatch = useDispatch();
@@ -21,7 +26,7 @@ function ContactsPage() {
     <div>
       <MainTitle />
       <Form />
-      <Finder />
+      {contacts?.length > 0 && <Finder />}
       <ContactsList />
       {isLoading && !error && (
         <p>

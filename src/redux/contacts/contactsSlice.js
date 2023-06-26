@@ -19,7 +19,7 @@ const handleFulfilledfetchContacts = (state, { payload }) => {
 const handleFulfilledAddContact = (state, { payload }) => {
   state.isLoading = false;
   state.error = null;
-  state.items.unshift(payload);
+  state.items.push(payload);
 };
 
 const handleFulfilledDeleteContact = (state, { payload }) => {
