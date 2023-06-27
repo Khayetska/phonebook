@@ -12,6 +12,7 @@ const {
   login_label,
   login_input,
   input_wrapper,
+  input_notice,
   login_button,
   toggle,
   toggle_link,
@@ -85,7 +86,9 @@ function LogIn({ register = false }) {
               id="password"
               required
             />
+            {register && <p className={input_notice}>At least 7 characters*</p>}
           </div>
+
           <button type="submit" className={login_button}>
             {register ? 'Sign up' : 'Log in'}
           </button>

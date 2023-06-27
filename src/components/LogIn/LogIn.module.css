@@ -60,6 +60,12 @@
     padding-bottom: 5px;
 }
 
+.input_notice {
+    margin: 0;
+    color: rgba(188, 188, 188, 0.675);
+    font-size: 15px;
+}
+
 .login_button {
     padding: 10px 30px;
     font-size: 18px;
